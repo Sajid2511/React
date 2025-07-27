@@ -2,20 +2,31 @@ import { useState } from 'react'
 import './App.css'
 import Counter from './state'
 import Toggle from './toggle'
-import { h1 } from 'framer-motion/client'
+import { div, h1 } from 'framer-motion/client'
+import MultipleCondition from './ElseIf'
 
-function App() {
-  const [display, setDisplay]=useState(true)
-  return (
+// importing the multiple elseif condition 
+function App(){
+  return(
     <div>
-      <h1> going to toggle a component </h1>
-      <button onClick={()=>setDisplay(!display)}>toggle</button>
-      {
-        display? <Toggle/>:'kya coder banega re tu'
-      }
+      <MultipleCondition/>
     </div>
+    
   )
 }
+// function App() {
+//   const [display, setDisplay]=useState(true)
+//   return (
+//     <div>
+//       <h1> going to toggle a component </h1>
+//       <button onClick={()=>setDisplay(!display)}>toggle</button>
+//       {
+//         display? <Toggle/>:<h1>Toggle ho gya bhai  </h1>
+//       }
+//       <multipleCondition/>
+//     </div>
+//   )
+// }
 
 //   const handleFruit=()=>{
 //     setFruit( fruit=== 'Apple'?"banana":"Apple");
